@@ -23,6 +23,7 @@ app.get('*', (req, res) => { res.status(400).send("404 NOT FOUND"); });
 app.get('/app/rps', (req, res) => { res.status(200).send(rps()); });
 
 //Play RPSLS
+app.get('/app/rpsls', (req, res) => { res.status(200).send(rpsls()); });
 
 //Play RPS against an opponent (URLEncoded data body)
 
