@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 //Get the root endpoint of your app
+app.get('/app', (req, res) => {	res.status(200).send("200 OK"); });
 
 //Call a nonexistent endpoint
 
