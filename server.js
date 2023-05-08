@@ -16,9 +16,6 @@ app.use(express.urlencoded({extended: true}));
 //Get the root endpoint of your app
 app.get('/app', (req, res) => {	res.status(200).send("200 OK"); });
 
-//Call a nonexistent endpoint
-app.get('*', (req, res) => { res.status(400).send("404 NOT FOUND"); });
-
 //Play RPS
 app.get('/app/rps', (req, res) => { res.status(200).send(rps()); });
 
@@ -42,6 +39,9 @@ app.get('/app/rps/play/:shot', (req, res) => { res.status(200).send(rps(req.para
 
 //Play RPSLS against an opponent (parameter endpoint)
 app.get('/app/rpsls/play/:shot', (req, res) => { res.status(200).send(rpsls(req.params.shot)); });
+
+//Call a nonexistent endpoint
+app.get('*', (req, res) => { res.status(400).send("404 NOT FOUND"); });
 
 
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
