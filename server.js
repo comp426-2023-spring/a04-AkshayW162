@@ -17,6 +17,7 @@ app.use(express.urlencoded({extended: true}));
 app.get('/app', (req, res) => {	res.status(200).send("200 OK"); });
 
 //Call a nonexistent endpoint
+app.get('*', (req, res) => { res.status(400).send("404 NOT FOUND"); });
 
 //Play RPS
 
