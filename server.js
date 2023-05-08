@@ -26,6 +26,7 @@ app.get('/app/rps', (req, res) => { res.status(200).send(rps()); });
 app.get('/app/rpsls', (req, res) => { res.status(200).send(rpsls()); });
 
 //Play RPS against an opponent (URLEncoded data body)
+app.get('/app/rps/play', (req, res) => { res.status(200).send(rps(req.query.shot)); });
 
 //Play RPSLS against an opponent (URLEncoded data body)
 
