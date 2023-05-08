@@ -38,6 +38,7 @@ app.post('/app/rps/play', (req, res) => { res.status(200).send(rps(req.body.shot
 app.post('/app/rpsls/play', (req, res) => { res.status(200).send(rpsls(req.body.shot)); });
 
 //Play RPS against an opponent (parameter endpoint)
+app.get('/app/rps/play/:shot', (req, res) => { res.status(200).send(rps(req.params.shot)); });
 
 //Play RPSLS against an opponent (parameter endpoint)
 
