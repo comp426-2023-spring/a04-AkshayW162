@@ -43,6 +43,4 @@ app.get('/app/rps/play/:shot', (req, res) => { res.status(200).send(rps(req.para
 //Play RPSLS against an opponent (parameter endpoint)
 app.get('/app/rpsls/play/:shot', (req, res) => { res.status(200).send(rpsls(req.params.shot)); });
 
-//Look at the package.json file
 
-//Get the headers
