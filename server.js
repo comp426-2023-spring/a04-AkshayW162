@@ -44,3 +44,4 @@ app.get('/app/rps/play/:shot', (req, res) => { res.status(200).send(rps(req.para
 app.get('/app/rpsls/play/:shot', (req, res) => { res.status(200).send(rpsls(req.params.shot)); });
 
 
+app.listen(port, () => { console.log(`Listening on port ${port}`); });
